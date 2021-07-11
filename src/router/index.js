@@ -1,7 +1,6 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 
-
 Vue.use(VueRouter)
 
 /* 路由懒加载 */
@@ -11,6 +10,7 @@ const Profile = () => import('views/profile/Profile.vue')
 const Order = () => import('views/order/Order.vue')
 const Address = () => import("views/address/Address.vue")
 const CityList = () => import("views/cityList/CityList.vue")
+const Search = () => import("views/search/Search.vue")
 const routes = [
   { path: "/home", name: "home", component: Home },
   { path: "/login", name: "login", component: Login },
@@ -18,7 +18,9 @@ const routes = [
   { path: "/order", name: "order", component: Order },
   { path: "/address", name: "address", component: Address },
   { path: "/citylist", name: "cityList", component: CityList },
-  { path: "/", redirect: "/home" }
+  { path: "/search", name: "search", component: Search },
+  { path: "/", redirect: "/home" },
+
 ]
 
 const router = new VueRouter({

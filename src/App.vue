@@ -13,9 +13,8 @@ export default {
   },
 
   methods: {
-    getGaoDePosition() {
-      // 保存this
-      let self = this;
+    getLocation() {
+      const self = this;
       AMap.plugin("AMap.Geolocation", function () {
         var geolocation = new AMap.Geolocation({
           // 是否使用高精度定位，默认：true
@@ -28,47 +27,40 @@ export default {
         AMap.event.addListener(geolocation, "complete", onComplete);
         AMap.event.addListener(geolocation, "error", onError);
 
-        // 成功获得定位
         function onComplete(data) {
-          // data是具体的定位信息 精准定位
+          // data是具体的定位信息  精准定位
           // console.log(data);
-
-          //使用vuex中的actions
           self.$store.dispatch("setPosition", data);
           self.$store.dispatch("setAddress", data.formattedAddress);
         }
 
-        // 失败
         function onError(data) {
-          // 定位出错
+          // 定位出错    非精准定位
           // console.log(data);
-          // 处理定位出错
-          self.handleErrorPosition();
+          self.getLngLatLocation();
         }
       });
     },
-    handleErrorPosition() {
-      let self = this;
+    getLngLatLocation() {
+      const self = this;
       AMap.plugin("AMap.CitySearch", function () {
         var citySearch = new AMap.CitySearch();
         citySearch.getLocalCity(function (status, result) {
           if (status === "complete" && result.info === "OK") {
             // 查询成功，result即为当前所在城市信息
-            console.log(result); //返回的是经纬度
-
-            // 逆向地理坐标编码，将经纬度解析成地址
+            // console.log(result);
             AMap.plugin("AMap.Geocoder", function () {
               var geocoder = new AMap.Geocoder({
                 // city 指定进行编码查询的城市，支持传入城市名、adcode 和 citycode
                 city: result.adcode,
               });
 
-              var lnglat = result.rectangle.split(";")[0].split(";");
+              var lnglat = result.rectangle.split(";")[0].split(",");
+
               geocoder.getAddress(lnglat, function (status, data) {
                 if (status === "complete" && data.info === "OK") {
-                  // data为对应的地理位置详细信息
+                  // result为对应的地理位置详细信息
                   // console.log(data);
-                  //使用vuex中的actions
                   self.$store.dispatch("setPosition", {
                     addressComponent: {
                       city: result.city,
@@ -76,6 +68,7 @@ export default {
                     },
                     formattedAddress: data.regeocode.formattedAddress,
                   });
+
                   self.$store.dispatch(
                     "setAddress",
                     data.regeocode.formattedAddress
@@ -111,7 +104,8 @@ export default {
     };
   },
   created() {
-    this.getGaoDePosition();
+    this.getLocation();
+    this.getLngLatLocation();
   },
 };
 </script>

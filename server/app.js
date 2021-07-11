@@ -67,6 +67,19 @@ app.get('/api/merchants', (req, res) => {
   res.json(data ? data : null)
 })
 
+
+app.get('/api/searchGoods', (req, res) => {
+  let parseObj = url.parse(req.url, true)
+  let { name } = parseObj.query
+  const totalResult = require('./datas/search.json').data
+
+  let data = totalResult.filter((val) => {
+    return val.name.includes(name)
+  })
+  res.json(data ? data : null)
+})
+
+
 // 开启监听
 app.listen(4000, () => {
   console.log('4000端口已经启动')

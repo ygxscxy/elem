@@ -213,7 +213,7 @@ export default {
 .filter-box {
   background: #fff;
   position: sticky;
-  top: 49px;
+  top: 44px;
   z-index: 10;
 }
 .filter {
@@ -247,7 +247,7 @@ export default {
 
 /* 蒙版 */
 .is-show-mask {
-  position: fixed;
+  position: relative;
   top: 0;
   left: 0;
   width: 100%;
@@ -266,7 +266,7 @@ export default {
   width: 100%;
   z-index: 4;
   left: 0;
-  top: 23.533333vw;
+  /* top: 23.533333vw; */
 }
 .filter-sort li {
   position: relative;
@@ -290,11 +290,12 @@ export default {
   background-color: #fff;
   color: #333;
   padding-top: 2.133333vw;
-  position: absolute;
+  /* position: absolute; */
+  position: relative;
   width: 100%;
   z-index: 4;
   left: 0;
-  top: 23.533333vw;
+  /* top: 23.533333vw; */
 }
 .filter-screen li {
   position: relative;

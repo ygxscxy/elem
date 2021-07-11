@@ -4,7 +4,7 @@ export default {
     return state.position
   },
   getAddress(state) {
-    // console.log(state.address);
+    console.log(state.address);
     return state.address
   },
 }

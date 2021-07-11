@@ -1,215 +1,60 @@
 <template>
   <div>
-    <!-- <Scroll class="aaa">
-      <ul>
-        <li>111</li>
-        <li>111</li>
-        <li>111</li>
-        <li>111</li>
-        <li>111</li>
-        <li>111</li>
-        <li>111</li>
-        <li>111</li>
-        <li>111</li>
-        <li>111</li>
-        <li>111</li>
-        <li>111</li>
-        <li>111</li>
-        <li>111</li>
-        <li>111</li>
-        <li>111</li>
-        <li>111</li>
-        <li>111</li>
-        <li>111</li>
-        <li>111</li>
-        <li>111</li>
-        <li>111</li>
-        <li>111</li>
-        <li>111</li>
-        <li>111</li>
-        <li>111</li>
-        <li>111</li>
-        <li>111</li>
-        <li>111</li>
-        <li>111</li>
-        <li>111</li>
-        <li>111</li>
-        <li>111</li>
-        <li>111</li>
-        <li>111</li>
-        <li>111</li>
-        <li>111</li>
-        <li>111</li>
-        <li>111</li>
-        <li>111</li>
-        <li>111</li>
-        <li>111</li>
-        <li>111</li>
-        <li>111</li>
-        <li>111</li>
-        <li>111</li>
-        <li>111</li>
-        <li>111</li>
-        <li>111</li>
-        <li>111</li>
-        <li>111</li>
-        <li>111</li>
-        <li>111</li>
-        <li>111</li>
-        <li>111</li>
-        <li>111</li>
-        <li>111</li>
-        <li>111</li>
-        <li>111</li>
-        <li>111</li>
-        <li>111</li>
-        <li>111</li>
-        <li>111</li>
-        <li>111</li>
-        <li>111</li>
-        <li>111</li>
-        <li>111</li>
-        <li>111</li>
-        <li>111</li>
-        <li>111</li>
-        <li>111</li>
-        <li>111</li>
-        <li>111</li>
-        <li>111</li>
-        <li>111</li>
-        <li>111</li>
-        <li>111</li>
-        <li>111</li>
-        <li>111</li>
-        <li>111</li>
-        <li>111</li>
-        <li>111</li>
-        <li>111</li>
-        <li>111</li>
-        <li>111</li>
-        <li>111</li>
-        <li>111</li>
-        <li>111</li>
-        <li>111</li>
-        <li>111</li>
-        <li>111</li>
-        <li>111</li>
-        <li>111</li>
-        <li>111</li>
-        <li>111</li>
-        <li>111</li>
-        <li>111</li>
-        <li>111</li>
-        <li>111</li>
-        <li>111</li>
-      </ul>
-    </Scroll> -->
-    <ul
-      :v-infinite-scroll="loadMore"
-      :infinite-scroll-disabled="loading"
-      :infinite-scroll-distance="10"
-    >
-      <li>1</li>
-      <li>1</li>
-      <li>1</li>
-      <li>1</li>
-      <li>1</li>
-      <li>1</li>
-      <li>1</li>
-      <li>1</li>
-      <li>1</li>
-      <li>1</li>
-      <li>1</li>
-      <li>1</li>
-      <li>1</li>
-      <li>1</li>
-      <li>1</li>
-      <li>1</li>
-      <li>1</li>
-      <li>1</li>
-      <li>1</li>
-      <li>1</li>
-      <li>1</li>
-      <li>1</li>
-      <li>1</li>
-      <li>1</li>
-      <li>1</li>
-      <li>1</li>
-      <li>1</li>
-      <li>1</li>
-      <li>1</li>
-      <li>1</li>
-      <li>1</li>
-      <li>1</li>
-      <li>1</li>
-      <li>1</li>
-      <li>1</li>
-      <li>1</li>
-      <li>1</li>
-      <li>1</li>
-      <li>1</li>
-      <li>1</li>
-      <li>1</li>
-      <li>1</li>
-      <li>1</li>
-      <li>1</li>
-      <li>1</li>
-      <li>1</li>
-      <li>1</li>
-      <li>1</li>
-      <li>1</li>
-      <li>1</li>
-      <li>1</li>
-      <li>1</li>
-      <li>1</li>
-      <li>1</li>
-      <li>1</li>
-      <li>1</li>
-      <li>1</li>
-      <li>1</li>
-      <li>1</li>
-      <li>1</li>
-      <li>1</li>
-      <li>1</li>
-      <li>1</li>
-      <li>1</li>
-      <li>1</li>
-    </ul>
+    <div class="aaa"></div>
+    <div class="shop">
+      <mt-loadmore
+        :top-method="loadTop"
+        :bottom-method="loadBottom"
+        :bottom-all-loaded="allLoaded"
+        :auto-fill="false"
+        ref="loadmore"
+      >
+        <ul ref="ul1">
+          <li>1</li>
+          <li>2</li>
+          <li>3</li>
+          <li>4</li>
+          <li>5</li>
+          <li>6</li>
+          <li>7</li>
+          <li>8</li>
+          <li>9</li>
+          <li>10</li>
+        </ul>
+      </mt-loadmore>
+    </div>
   </div>
 </template>
 
 <script>
-// import Scroll from "components/common/scroll/Scroll.vue";
-import { InfiniteScroll } from "mint-ui";
 export default {
-  components: {
-    // Scroll,
-    InfiniteScroll,
-  },
   data() {
     return {
-      loading: false,
+      allLoaded: false,
     };
   },
   methods: {
-    loadMore() {
-      this.loading = true;
-      setTimeout(() => {
-        let last = this.list[this.list.length - 1];
-        for (let i = 1; i <= 10; i++) {
-          this.list.push(last + i);
-        }
-        this.loading = false;
-      }, 2500);
+    loadTop() {
+      this.$refs.loadmore.onTopLoaded();
+    },
+
+    loadBottom() {
+      for (let i = 0; i < 10; i++) {
+        let li = document.createElement("li");
+        li.innerText = "aaaa";
+        this.$refs.ul1.append(li);
+      }
+      // this.allLoaded = true; // 若数据已全部获取完毕
+      this.$refs.loadmore.onBottomLoaded();
     },
   },
 };
 </script>
 
-<style scoped>
+<style>
 .aaa {
-  height: 300px;
-  width: 100%;
   background-color: red;
+  height: 95px;
+  width: 100%;
 }
 </style>

@@ -41,47 +41,44 @@ export default {
       // 通过observeImage和observeImage可以动态的拓展滚动区域的高度
       observeImage: true, //当检测到图像加载或加载失败时，自动刷新 BetterScroll 的高度。
       keepAlive: true, //自动保存滚动的状态信息
+      pullDownRefresh: {
+        threshold: 150,
+      },
+      pullUpLoad: {
+        threshold: 744,
+      },
     });
 
     if (this.pullUpLoad) {
       // 监听滚顶条是否到达底部
       this.scroll.on("pullingUp", () => {
         //监听的事件 pullingUp触发的话，就代表需要拉取更多的数据
-        this.$emit("getMoreData");
-        console.log("到达底部");
+        // console.log("到达底部");
         //此时 上拉加载更多 发送ajax请求，
-        /*  setTimeout(() => {
+        setTimeout(() => {
+          this.$emit("getMoreData");
           this.scroll.finishPullUp();
-        }, 2000); */
+        }, 1000);
       });
     }
 
-    // 监听滚动
     if (this.probeType == 2 || this.probeType == 3) {
+      // 监听滚动到的位置
       this.scroll.on("scroll", (position) => {
         // 向父组件传递position，那个组件只要绑定上getScrollPosition自定事件，这个position就会自动的携带过去
         this.$emit("getScrollPosition", position);
         // console.log(position); //position需要结合probeType使用
       });
+
+      //监听下拉刷新
+      this.scroll.on("pullingDown", () => {
+        this.$emit("pullDownRefresh");
+        this.$nextTick(() => {
+          this.scroll.refresh(); // DOM 结构发生变化后，重新初始化BScroll
+        });
+        this.scroll.finishPullDown(); // 下拉刷新动作完成后调用此方法告诉BScroll完成一次下拉动作
+      });
     }
-
-    this.scroll.on("pullingDown", () => {
-      // ...发送Ajax从后台拿数据...
-      // ...
-      this.$nextTick(() => {
-        this.scroll.refresh(); // DOM 结构发生变化后，重新初始化BScroll
-      });
-      this.scroll.finishPullDown(); // 下拉刷新动作完成后调用此方法告诉BScroll完成一次下拉动作
-    });
-
-    this.scroll.on("pullingUp", () => {
-      // ...发送Ajax从后台拿数据...
-      // ...
-      this.$nextTick(() => {
-        this.scroll.refresh(); // DOM 结构发生变化后，重新初始化BScroll
-      });
-      this.scroll.finishPullUp(); // 上拉加载动作完成后调用此方法告诉BScroll完成一次上拉动作
-    });
   },
   methods: {
     // 滚动到指定的元素

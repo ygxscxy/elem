@@ -10,7 +10,9 @@
     <!-- 右侧 -->
     <div class="header-right-box is-right" v-show="isRight">
       <i class="fa fa-user-o"></i>
-      <button @click="$router.push('/profile')">用户中心</button>
+      <button @click="$router.push('/profile')">
+        <slot name="right"></slot>
+      </button>
     </div>
   </div>
 </template>

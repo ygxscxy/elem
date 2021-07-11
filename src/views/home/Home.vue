@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <!-- 首页的头部 -->
-    <div class="home-header flex a-c">
+    <div class="home-header flex a-c" v-if="isShowAddress">
       <!-- 当前定位 -->
       <div
         class="header-icon"
@@ -21,7 +21,7 @@
       :class="{ 'is-top-show': isShowMask }"
     >
       <!-- 搜索框 -->
-      <div class="search-box">
+      <div class="search-box" @click="intoSearch">
         <i class="fa fa-search fangdajing"></i>
         <InputComp
           class="inputSearch"
@@ -33,8 +33,22 @@
         <span></span>
       </div>
     </div>
-
-    <Scroll ref="scr" class="home-scroll">
+    <HomeFilter
+      @isTopShowIpt="isTopShowIpt"
+      :filterData="filterData"
+      @orderBy="orderBy"
+      class="flexd-HomeFilter"
+      v-if="isShowFilter"
+    ></HomeFilter>
+    <Scroll
+      ref="scr"
+      @getMoreData="getMoreData"
+      @pullDownRefresh="pullDownRefresh"
+      @getScrollPosition="getScrollPosition"
+      :probeType="3"
+      :pullUpLoad="true"
+      class="home-scroll"
+    >
       <!-- 首页内容区域 -->
       <div class="home-content">
         <!-- 轮播图区域 -->
@@ -65,7 +79,7 @@
           @isTopShowIpt="isTopShowIpt"
           :filterData="filterData"
           @orderBy="orderBy"
-          class="HomeFilter"
+          :class="{ HomeFilter: isShowMask }"
         ></HomeFilter>
       </div>
       <div class="store-list">
@@ -121,6 +135,8 @@ export default {
       allLoaded: false,
       temp: null,
       bottomPullText: "上拉加载更多...",
+      isShowFilter: false,
+      isShowAddress: true,
     };
   },
 
@@ -132,6 +148,10 @@ export default {
     this.getHomeFilter();
   },
   methods: {
+    intoSearch() {
+      this.$router.push("/search");
+    },
+
     // 获取轮播图图片数据
     getSwipeData() {
       getHomeData({
@@ -159,6 +179,7 @@ export default {
         },
       }).then((res) => {
         this.homeStoreList.push(res.data.data);
+        // this.homeStoreList = [res.data.data];
         // this.homeStoreList = res.data.data;
         // console.log(this.homeStoreList);
         // this.temp = res.data.data;
@@ -193,29 +214,28 @@ export default {
     },
 
     // 加载数据
-    pullTopLoadData(loadmore) {
-      if (!this.allLoaded) {
-        if (this.temp) {
-          // 数据为空
-          this.allLoaded = true;
-          this.bottomPullText = "没有更多了...";
-        } else {
-          this.currentStorePage += 1;
-          this.getStoreList();
-          // 加载完毕后重新渲染
-          loadmore.onBottomLoaded();
-
-          this.$refs.scr.refreshEnc();
-        }
-      }
+    getMoreData() {
+      this.currentStorePage += 1;
+      this.getStoreList();
+      // 加载完毕后重新渲染
+      this.$refs.scr.refreshEnc();
     },
     // 刷新数据
-    pullBottomRefresh(loadmore) {
-      this.allLoaded = false;
+    pullDownRefresh() {
       this.homeStoreList = [this.homeStoreList[0]];
-      // console.log(this.homeStoreList);
-      // 加载完毕
-      loadmore.onTopLoaded();
+    },
+    getScrollPosition(position) {
+      if (-position.y >= 398) {
+        this.isShowFilter = true;
+      } else {
+        this.isShowFilter = false;
+      }
+
+      if (-position.y > 0) {
+        this.isShowAddress = false;
+      } else {
+        this.isShowAddress = true;
+      }
     },
   },
 };
@@ -361,5 +381,19 @@ export default {
 }
 .shoplist-title:after {
   margin-left: 3.466667vw;
+}
+.flexd-HomeFilter {
+  position: fixed;
+  top: 44px;
+  z-index: 888;
+  width: 100%;
+}
+.HomeFilter {
+  position: fixed;
+  top: 44px;
+  z-index: 888;
+  right: 0;
+  left: 0;
+  width: 100%;
 }
 </style>

@@ -1,0 +1,756 @@
+{
+  "data": [
+    {
+      "name": "鸡肉",
+      "restaurant": [
+        {
+          "activities": [
+            {
+              "attribute": "{\"99\": {\"1\": 56.0, \"0\": 0}, \"70\": {\"1\": 45.0, \"0\": 0}, \"45\": {\"1\": 26.0, \"0\": 0}, \"30\": {\"1\": 23.0, \"0\": 0}}",
+              "description": "满30减23，满45减26，满70减45，满99减56",
+              "icon_color": "f07373",
+              "icon_name": "减",
+              "id": 1351361538,
+              "is_exclusive_with_food_activity": true,
+              "name": "满减",
+              "tips": "满30减23，满45减26，满70减45，满99减56",
+              "type": 102
+            },
+            {
+              "attribute": "17.0",
+              "description": "新用户下单立减17元",
+              "icon_color": "70bc46",
+              "icon_name": "首",
+              "id": 1129215889,
+              "is_exclusive_with_food_activity": true,
+              "name": "新用户立减(不与其他活动共享)",
+              "tips": "新用户下单立减17元",
+              "type": 103
+            },
+            {
+              "description": "超值换购",
+              "icon_color": "f1884f",
+              "icon_name": "换",
+              "id": 1344635201,
+              "name": "超值换购",
+              "tips": "超值换购"
+            },
+            {
+              "description": "超值换购",
+              "icon_color": "f1884f",
+              "icon_name": "换",
+              "id": 1319172273,
+              "name": "超值换购",
+              "tips": "超值换购"
+            },
+            {
+              "description": "单品定价",
+              "icon_color": "f1884f",
+              "icon_name": "特",
+              "id": 1319165425,
+              "name": "单品定价",
+              "tips": "单品定价"
+            },
+            {
+              "description": "小堡超低折扣单品",
+              "icon_color": "f07373",
+              "icon_name": "特",
+              "id": 396913025,
+              "name": "小堡超低折扣单品",
+              "tips": "小堡超低折扣单品"
+            },
+            {
+              "description": "抖友半价套餐",
+              "icon_color": "f1884f",
+              "icon_name": "特",
+              "id": 396910161,
+              "name": "抖友半价套餐",
+              "tips": "抖友半价套餐"
+            },
+            {
+              "description": "小堡人气半价单品",
+              "icon_color": "f07373",
+              "icon_name": "特",
+              "id": 396913873,
+              "name": "小堡人气半价单品",
+              "tips": "小堡人气半价单品"
+            },
+            {
+              "description": "超低小堡福利来袭",
+              "icon_color": "f1884f",
+              "icon_name": "特",
+              "id": 396914793,
+              "name": "超低小堡福利来袭",
+              "tips": "超低小堡福利来袭"
+            },
+            {
+              "description": "小堡四折：佩奇套餐",
+              "icon_color": "f07373",
+              "icon_name": "特",
+              "id": 396910929,
+              "name": "小堡四折：佩奇套餐",
+              "tips": "小堡四折：佩奇套餐"
+            },
+            {
+              "description": "单品折扣",
+              "icon_color": "f07373",
+              "icon_name": "折",
+              "id": 1184613521,
+              "name": "单品折扣",
+              "tips": "单品折扣"
+            }
+          ],
+          "address": "长沙市岳麓区西湖街道裕民小区16栋1楼1号",
+          "authentic_id": 7323347268304321,
+          "description": "全国品牌连锁，所有食材都经过相关部门检验合格",
+          "distance": 2448,
+          "favored": false,
+          "flavors": [
+            {
+              "id": 212,
+              "name": "汉堡"
+            },
+            {
+              "id": 234,
+              "name": "炸鸡炸串"
+            }
+          ],
+          "float_delivery_fee": 1.6,
+          "float_minimum_order_amount": 20,
+          "has_story": false,
+          "id": 163019421,
+          "image_path": "cb07397b6f4cf7ac2eb292c5b9b33ee5png",
+          "is_new": false,
+          "is_premium": true,
+          "is_stock_empty": 0,
+          "is_valid": 1,
+          "latitude": 28.213506,
+          "longitude": 112.932731,
+          "max_applied_quantity_per_order": -1,
+          "name": "韦小堡•炸鸡汉堡(王府井店)",
+          "next_business_time": "",
+          "only_use_poi": false,
+          "opening_hours": [
+            "10:00/24:00"
+          ],
+          "order_lead_time": 36,
+          "phone": "13787253811",
+          "piecewise_agent_fee": {
+            "description": "配送费¥1.6",
+            "extra_fee": 0,
+            "is_extra": false,
+            "rules": [
+              {
+                "fee": 1.6,
+                "price": 20
+              }
+            ],
+            "tips": "优惠配送费¥1.6"
+          },
+          "platform": 0,
+          "posters": [],
+          "promotion_info": "一分价钱一份品质，我傲娇我的生活！",
+          "rating": 4.8,
+          "rating_count": 0,
+          "recent_order_num": 3311,
+          "recommend": {
+            "image_hash": "731111f3f9379e772eedf4855beae8a1jpeg",
+            "is_ad": false,
+            "track": "{\"rankType\":\"17\",\"trafficCardId\":\"45848361\"}"
+          },
+          "recommend_reasons": [
+            {
+              "name": "味道超赞"
+            },
+            {
+              "name": "回头客多"
+            }
+          ],
+          "regular_customer_count": 0,
+          "scheme": "eleme://catering?restaurant_id=163019421",
+          "status": 1,
+          "support_tags": [
+            {
+              "border": "dddddd",
+              "color": "666666",
+              "icon": "4e20966ca2a516de3f02fb9c7fd1bc6dpng",
+              "text": "汉堡",
+              "type": 1
+            },
+            {
+              "border": "dddddd",
+              "color": "333333",
+              "text": "品质联盟"
+            }
+          ],
+          "supports": [],
+          "theme": {
+            "default_color": "2395ff",
+            "header_style": 0,
+            "hongbao_style": 0,
+            "price_color": "ff5339",
+            "third_tab_name": "商家",
+            "vanish_fields": []
+          },
+          "type": 0
+        },
+        {
+          "activities": [
+            {
+              "attribute": "{\"40\": {\"1\": 20.0, \"0\": 0}, \"60\": {\"1\": 28.0, \"0\": 0}, \"50\": {\"1\": 22.0, \"0\": 0}, \"20\": {\"1\": 12.0, \"0\": 0}, \"30\": {\"1\": 16.0, \"0\": 0}}",
+              "description": "满20减12，满30减16，满40减20，满50减22，满60减28",
+              "icon_color": "f07373",
+              "icon_name": "减",
+              "id": 1396704681,
+              "is_exclusive_with_food_activity": true,
+              "name": "自营销复杂满减活动",
+              "tips": "满20减12，满30减16，满40减20，满50减22，满60减28",
+              "type": 102
+            },
+            {
+              "description": "单品折扣",
+              "icon_color": "f07373",
+              "icon_name": "折",
+              "id": 1396843265,
+              "name": "单品折扣",
+              "tips": "单品折扣"
+            },
+            {
+              "attribute": "17.0",
+              "description": "新用户下单立减17元",
+              "icon_color": "70bc46",
+              "icon_name": "首",
+              "id": 805883226,
+              "is_exclusive_with_food_activity": true,
+              "name": "新用户立减(不与其他活动共享)",
+              "tips": "新用户下单立减17元",
+              "type": 103
+            },
+            {
+              "description": "单品定价",
+              "icon_color": "f1884f",
+              "icon_name": "特",
+              "id": 1305054321,
+              "name": "单品定价",
+              "tips": "单品定价"
+            },
+            {
+              "description": "单品定价",
+              "icon_color": "f1884f",
+              "icon_name": "特",
+              "id": 1305094769,
+              "name": "单品定价",
+              "tips": "单品定价"
+            },
+            {
+              "description": "单品定价",
+              "icon_color": "f1884f",
+              "icon_name": "特",
+              "id": 1305079265,
+              "name": "单品定价",
+              "tips": "单品定价"
+            },
+            {
+              "description": "单品定价",
+              "icon_color": "f1884f",
+              "icon_name": "特",
+              "id": 1305072937,
+              "name": "单品定价",
+              "tips": "单品定价"
+            },
+            {
+              "description": "单品定价",
+              "icon_color": "f1884f",
+              "icon_name": "特",
+              "id": 1305071569,
+              "name": "单品定价",
+              "tips": "单品定价"
+            },
+            {
+              "description": "单品折扣",
+              "icon_color": "f07373",
+              "icon_name": "折",
+              "id": 1077167905,
+              "name": "单品折扣",
+              "tips": "单品折扣"
+            },
+            {
+              "description": "童子鸡",
+              "icon_color": "f1884f",
+              "icon_name": "特",
+              "id": 363295538,
+              "name": "童子鸡",
+              "tips": "童子鸡"
+            },
+            {
+              "description": "A套餐",
+              "icon_color": "f1884f",
+              "icon_name": "特",
+              "id": 359422914,
+              "name": "A套餐",
+              "tips": "A套餐"
+            },
+            {
+              "description": "特惠套餐",
+              "icon_color": "f1884f",
+              "icon_name": "特",
+              "id": 359420986,
+              "name": "特惠套餐",
+              "tips": "特惠套餐"
+            }
+          ],
+          "address": "湖南省长沙市岳麓区西湖街道裕民小区3栋1单元1楼",
+          "authentic_id": 1383357268344807,
+          "delivery_mode": {
+            "border": "",
+            "color": "2395FF",
+            "gradient": {
+              "rgb_from": "00AAFF",
+              "rgb_to": "0085FF"
+            },
+            "icon_hash": "b9b45d2f6ff0dbeef3a78ef0e4e90abapng",
+            "id": 1,
+            "is_solid": true,
+            "text": "蜂鸟专送",
+            "text_color": "FFFFFF"
+          },
+          "description": "",
+          "distance": 2203,
+          "favored": false,
+          "flavors": [
+            {
+              "id": 265,
+              "name": "简餐"
+            },
+            {
+              "id": 234,
+              "name": "炸鸡炸串"
+            }
+          ],
+          "float_delivery_fee": 3.6,
+          "float_minimum_order_amount": 20,
+          "has_story": false,
+          "id": 2088907,
+          "image_path": "2997a4169a923f67b554b6ac2378bbc6png",
+          "is_new": false,
+          "is_premium": true,
+          "is_stock_empty": 0,
+          "is_valid": 1,
+          "latitude": 28.2151876841468,
+          "longitude": 112.932757076051,
+          "max_applied_quantity_per_order": -1,
+          "name": "叫了个炸鸡（裕民小区店）",
+          "next_business_time": "",
+          "only_use_poi": false,
+          "opening_hours": [
+            "10:30/22:00"
+          ],
+          "order_lead_time": 55,
+          "phone": "15211183872",
+          "piecewise_agent_fee": {
+            "description": "配送费¥3.6",
+            "extra_fee": 0,
+            "is_extra": false,
+            "rules": [
+              {
+                "fee": 3.6,
+                "price": 20
+              }
+            ],
+            "tips": "配送费¥3.6"
+          },
+          "platform": 0,
+          "posters": [],
+          "promotion_info": "最近出现了很多类似的鸡店，叫鸡请认准（叫了个鸡）网络小红鸡，全国加盟连锁品牌！一家专门做鸡的店，满足您对鸡的一切幻想！",
+          "rating": 4.7,
+          "rating_count": 0,
+          "recent_order_num": 614,
+          "recommend": {
+            "color": "#e8470b",
+            "image_hash": "ac124c767ffa7fd296d3e2d6f01798c6png",
+            "is_ad": false,
+            "reason": "口碑人气好店"
+          },
+          "recommend_reasons": [
+            {
+              "name": "回头客多"
+            }
+          ],
+          "regular_customer_count": 0,
+          "scheme": "eleme://catering?restaurant_id=2088907",
+          "status": 1,
+          "support_tags": [
+            {
+              "border": "dddddd",
+              "color": "666666",
+              "icon": "4e20966ca2a516de3f02fb9c7fd1bc6dpng",
+              "text": "简餐",
+              "type": 1
+            }
+          ],
+          "supports": [
+            {
+              "border": "90dddddd",
+              "description": "该商户食品安全已由国泰产险承担，食品安全有保障",
+              "icon_color": "999999",
+              "icon_name": "保",
+              "id": 7,
+              "name": "食安保",
+              "text_color": "666666",
+              "two_characters_icon_name": "保险"
+            }
+          ],
+          "theme": {
+            "default_color": "2395ff",
+            "header_style": 0,
+            "hongbao_style": 0,
+            "price_color": "ff5339",
+            "third_tab_name": "商家",
+            "vanish_fields": []
+          },
+          "type": 0
+        },
+        {
+          "activities": [
+            {
+              "attribute": "{\"32\": {\"1\": 18.0, \"0\": 0}, \"128\": {\"1\": 47.0, \"0\": 0}, \"19\": {\"1\": 10.0, \"0\": 0}, \"92\": {\"1\": 35.0, \"0\": 0}, \"62\": {\"1\": 27.0, \"0\": 0}}",
+              "description": "满19减10，满32减18，满62减27，满92减35，满128减47",
+              "icon_color": "f07373",
+              "icon_name": "减",
+              "id": 1487937041,
+              "is_exclusive_with_food_activity": true,
+              "name": "汴京",
+              "tips": "满19减10，满32减18，满62减27，满92减35，满128减47",
+              "type": 102
+            },
+            {
+              "description": "单品折扣",
+              "icon_color": "f07373",
+              "icon_name": "折",
+              "id": 1503968897,
+              "name": "单品折扣",
+              "tips": "单品折扣"
+            },
+            {
+              "description": "单品折扣",
+              "icon_color": "f07373",
+              "icon_name": "折",
+              "id": 1503968881,
+              "name": "单品折扣",
+              "tips": "单品折扣"
+            },
+            {
+              "description": "单品折扣",
+              "icon_color": "f07373",
+              "icon_name": "折",
+              "id": 1503968889,
+              "name": "单品折扣",
+              "tips": "单品折扣"
+            },
+            {
+              "description": "单品定价",
+              "icon_color": "f1884f",
+              "icon_name": "特",
+              "id": 1485167601,
+              "name": "单品定价",
+              "tips": "单品定价"
+            },
+            {
+              "description": "单品定价",
+              "icon_color": "f1884f",
+              "icon_name": "特",
+              "id": 1485167593,
+              "name": "单品定价",
+              "tips": "单品定价"
+            },
+            {
+              "description": "单品折扣",
+              "icon_color": "f07373",
+              "icon_name": "折",
+              "id": 1485141849,
+              "name": "单品折扣",
+              "tips": "单品折扣"
+            },
+            {
+              "description": "单品折扣",
+              "icon_color": "f07373",
+              "icon_name": "折",
+              "id": 1485141833,
+              "name": "单品折扣",
+              "tips": "单品折扣"
+            },
+            {
+              "description": "单品折扣",
+              "icon_color": "f07373",
+              "icon_name": "折",
+              "id": 1485141841,
+              "name": "单品折扣",
+              "tips": "单品折扣"
+            },
+            {
+              "description": "单品定价",
+              "icon_color": "f1884f",
+              "icon_name": "特",
+              "id": 1484030289,
+              "name": "单品定价",
+              "tips": "单品定价"
+            },
+            {
+              "attribute": "14.0",
+              "description": "新用户下单立减14元",
+              "icon_color": "70bc46",
+              "icon_name": "首",
+              "id": 804860858,
+              "is_exclusive_with_food_activity": true,
+              "name": "新用户立减(不与其他活动共享)",
+              "tips": "新用户下单立减14元",
+              "type": 103
+            },
+            {
+              "description": "单品定价",
+              "icon_color": "f1884f",
+              "icon_name": "特",
+              "id": 1314171481,
+              "name": "单品定价",
+              "tips": "单品定价"
+            },
+            {
+              "description": "单品折扣",
+              "icon_color": "f07373",
+              "icon_name": "折",
+              "id": 1144939785,
+              "name": "单品折扣",
+              "tips": "单品折扣"
+            },
+            {
+              "description": "单品折扣",
+              "icon_color": "f07373",
+              "icon_name": "折",
+              "id": 1173248497,
+              "name": "单品折扣",
+              "tips": "单品折扣"
+            },
+            {
+              "description": "单品折扣",
+              "icon_color": "f07373",
+              "icon_name": "折",
+              "id": 1144939089,
+              "name": "单品折扣",
+              "tips": "单品折扣"
+            },
+            {
+              "description": "单品折扣",
+              "icon_color": "f07373",
+              "icon_name": "折",
+              "id": 1199207193,
+              "name": "单品折扣",
+              "tips": "单品折扣"
+            },
+            {
+              "description": "庆51",
+              "icon_color": "f1884f",
+              "icon_name": "特",
+              "id": 365116450,
+              "name": "庆51",
+              "tips": "庆51"
+            },
+            {
+              "description": "单品折扣",
+              "icon_color": "f07373",
+              "icon_name": "折",
+              "id": 1199207209,
+              "name": "单品折扣",
+              "tips": "单品折扣"
+            },
+            {
+              "description": "单品折扣",
+              "icon_color": "f07373",
+              "icon_name": "折",
+              "id": 1199214641,
+              "name": "单品折扣",
+              "tips": "单品折扣"
+            },
+            {
+              "description": "单品折扣",
+              "icon_color": "f07373",
+              "icon_name": "折",
+              "id": 1199207225,
+              "name": "单品折扣",
+              "tips": "单品折扣"
+            },
+            {
+              "description": "汴京周年庆",
+              "icon_color": "f07373",
+              "icon_name": "特",
+              "id": 370925642,
+              "name": "汴京周年庆",
+              "tips": "汴京周年庆"
+            },
+            {
+              "description": "单品折扣",
+              "icon_color": "f07373",
+              "icon_name": "折",
+              "id": 1199207233,
+              "name": "单品折扣",
+              "tips": "单品折扣"
+            },
+            {
+              "description": "单品折扣",
+              "icon_color": "f07373",
+              "icon_name": "折",
+              "id": 1199207241,
+              "name": "单品折扣",
+              "tips": "单品折扣"
+            },
+            {
+              "description": "庆端午迎五一",
+              "icon_color": "f07373",
+              "icon_name": "特",
+              "id": 370925002,
+              "name": "庆端午迎五一",
+              "tips": "庆端午迎五一"
+            },
+            {
+              "description": "单品定价",
+              "icon_color": "f1884f",
+              "icon_name": "特",
+              "id": 1147264889,
+              "name": "单品定价",
+              "tips": "单品定价"
+            },
+            {
+              "description": "单品折扣",
+              "icon_color": "f07373",
+              "icon_name": "折",
+              "id": 1199207217,
+              "name": "单品折扣",
+              "tips": "单品折扣"
+            },
+            {
+              "description": "单品折扣",
+              "icon_color": "f07373",
+              "icon_name": "折",
+              "id": 1173248489,
+              "name": "单品折扣",
+              "tips": "单品折扣"
+            },
+            {
+              "description": "超值换购",
+              "icon_color": "f1884f",
+              "icon_name": "换",
+              "id": 371695226,
+              "name": "超值换购",
+              "tips": "超值换购"
+            },
+            {
+              "description": "三周年庆典",
+              "icon_color": "f07373",
+              "icon_name": "特",
+              "id": 342272666,
+              "name": "三周年庆典",
+              "tips": "三周年庆典"
+            }
+          ],
+          "address": "长沙市岳麓区观沙岭街道黄泥塘小区C3栋5单元1楼",
+          "authentic_id": 8313502054261305,
+          "business_info": "{}",
+          "description": "",
+          "distance": 2460,
+          "favored": false,
+          "flavors": [
+            {
+              "id": 234,
+              "name": "炸鸡炸串"
+            },
+            {
+              "id": 212,
+              "name": "汉堡"
+            }
+          ],
+          "float_delivery_fee": 3.1,
+          "float_minimum_order_amount": 15,
+          "has_story": false,
+          "id": 1990105,
+          "image_path": "758c999482b783b596b5348105eead09jpeg",
+          "is_new": false,
+          "is_premium": false,
+          "is_stock_empty": 0,
+          "is_valid": 1,
+          "latitude": 28.242478,
+          "longitude": 112.946747,
+          "max_applied_quantity_per_order": -1,
+          "name": "汴京炸鸡（绿地店）",
+          "next_business_time": "",
+          "only_use_poi": false,
+          "opening_hours": [
+            "09:00/04:15"
+          ],
+          "order_lead_time": 27,
+          "phone": "13507375028 13786705028",
+          "piecewise_agent_fee": {
+            "description": "夜间配送费¥3.1",
+            "extra_fee": 1.1,
+            "is_extra": true,
+            "no_subsidy_fee": "¥5.1",
+            "rules": [
+              {
+                "fee": 3.1,
+                "price": 15
+              }
+            ],
+            "tips": "夜间配送费¥3.1"
+          },
+          "platform": 0,
+          "posters": [],
+          "promotion_info": "本店食品均为现炸.食材当天腌制.请亲们放心食用\n外卖热线:13507375028  13786705028\n\n",
+          "rating": 4.5,
+          "rating_count": 41,
+          "recent_order_num": 156,
+          "recommend": {
+            "image_hash": "731111f3f9379e772eedf4855beae8a1jpeg",
+            "is_ad": false,
+            "track": "{\"rankType\":\"27\"}"
+          },
+          "recommend_reasons": [
+            {
+              "name": "配送飞快"
+            }
+          ],
+          "regular_customer_count": 0,
+          "scheme": "eleme://catering?restaurant_id=1990105",
+          "status": 1,
+          "support_tags": [
+            {
+              "border": "dddddd",
+              "color": "666666",
+              "icon": "4e20966ca2a516de3f02fb9c7fd1bc6dpng",
+              "text": "炸鸡炸串",
+              "type": 1
+            }
+          ],
+          "supports": [],
+          "tags": [],
+          "theme": {
+            "default_color": "2395ff",
+            "header_style": 0,
+            "hongbao_style": 0,
+            "price_color": "ff5339",
+            "third_tab_name": "商家",
+            "vanish_fields": []
+          },
+          "type": 0
+        }
+      ],
+      "words": [
+        "鸡肉",
+        "炸鸡",
+        "啤酒鸡",
+        "烤鸡",
+        "辣子鸡",
+        "小鸡炖蘑菇",
+        "叫花鸡",
+        "鸡米花"
+      ]
+    }
+  ]
+}

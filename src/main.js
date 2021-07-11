@@ -21,7 +21,8 @@ Vue.use(MintUI)
 
 // 格式化图片地址
 Vue.prototype.$formatImgSrc = formatImgSrc
-
+// 事件总线
+Vue.prototype.$EventBus = new Vue()
 
 
 new Vue({
