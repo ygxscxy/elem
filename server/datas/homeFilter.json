@@ -1,0 +1,200 @@
+[
+  {
+    "name": "综合排序",
+    "items": [
+      {
+        "id": "0",
+        "name": "综合排序"
+      },
+      {
+        "id": "1",
+        "name": "好评优先",
+        "order_by": "rating"
+      },
+      {
+        "id": "2",
+        "name": "销量最高",
+        "order_by": "sell_max"
+      },
+      {
+        "id": "3",
+        "name": "起送价最低",
+        "order_by": "reach_price_max"
+      },
+      {
+        "id": "4",
+        "name": "配送最快",
+        "order_by": "speed_max"
+      },
+      {
+        "id": "5",
+        "name": "配送费最低",
+        "order_by": "reach_price_mix"
+      },
+      {
+        "id": "6",
+        "name": "从低到高",
+        "order_by": "raise"
+      },
+      {
+        "id": "7",
+        "name": "down"
+      }
+    ],
+    "icon": "caret-right"
+  },
+  {
+    "name": "距离最近",
+    "id": "8",
+    "order_by": "distance"
+  },
+  {
+    "name": "品质联盟",
+    "id": "9",
+    "order_by": "quality"
+  },
+  {
+    "name": "筛选",
+    "items": [
+      {
+        "name": "商家服务(多选)",
+        "id": "store",
+        "items": [
+          {
+            "icon": "/screen/快递.png",
+            "name": "海鸥专送",
+            "id": "a1",
+            "checked": false
+          },
+          {
+            "icon": "/screen/品牌.png",
+            "name": "品牌商家",
+            "id": "a2",
+            "checked": false
+          },
+          {
+            "icon": "/screen/店铺.png",
+            "name": "新店",
+            "id": "a3",
+            "checked": false
+          },
+          {
+            "icon": "/screen/食品安全.png",
+            "name": "食安保",
+            "id": "a4",
+            "checked": false
+          },
+          {
+            "icon": "/screen/开发票.png",
+            "name": "开发票",
+            "id": "a5",
+            "checked": false
+          }
+        ]
+      },
+      {
+        "name": "优惠活动（单选）",
+        "id": "activity",
+        "items": [
+          {
+            "icon": "",
+            "name": "新用户优惠",
+            "id": "b1",
+            "checked": false
+          },
+          {
+            "icon": "",
+            "name": "特价",
+            "id": "b2",
+            "checked": false
+          },
+          {
+            "icon": "",
+            "name": "下单减少",
+            "id": "b3",
+            "checked": false
+          },
+          {
+            "icon": "",
+            "name": "下单返红包",
+            "id": "b4",
+            "checked": false
+          },
+          {
+            "icon": "",
+            "name": "配送费优惠",
+            "id": "b5",
+            "checked": false
+          },
+          {
+            "icon": "",
+            "name": "首单立减",
+            "id": "b6",
+            "checked": false
+          },
+          {
+            "icon": "",
+            "name": "品牌联盟红包",
+            "id": "b7",
+            "checked": false
+          },
+          {
+            "icon": "",
+            "name": "满100减60",
+            "id": "b8",
+            "checked": false
+          },
+          {
+            "icon": "",
+            "name": "大清仓",
+            "id": "b9",
+            "checked": false
+          }
+        ]
+      },
+      {
+        "name": "人均消费",
+        "id": "buys",
+        "items": [
+          {
+            "icon": "",
+            "name": "￥20以下",
+            "id": "c1",
+            "checked": false
+          },
+          {
+            "icon": "",
+            "name": "￥20-￥40",
+            "id": "c2",
+            "checked": false
+          },
+          {
+            "icon": "",
+            "name": "￥40-￥60",
+            "id": "c3",
+            "checked": false
+          },
+          {
+            "icon": "",
+            "name": "￥60-￥100",
+            "id": "c4",
+            "checked": false
+          },
+          {
+            "icon": "",
+            "name": "￥100-￥1000",
+            "id": "c5",
+            "checked": false
+          },
+          {
+            "icon": "",
+            "name": "￥1000以上",
+            "id": "c6",
+            "checked": false
+          }
+        ]
+      }
+    ],
+    "icon": "filter"
+  }
+]

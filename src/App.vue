@@ -1,32 +1,134 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
+    <router-view></router-view>
+    <TabBar :tabBarList="tabBarList"></TabBar>
   </div>
 </template>
 
+<script>
+import TabBar from "components/common/tabBar/TabBar.vue";
+export default {
+  components: {
+    TabBar,
+  },
+
+  methods: {
+    getGaoDePosition() {
+      // 保存this
+      let self = this;
+      AMap.plugin("AMap.Geolocation", function () {
+        var geolocation = new AMap.Geolocation({
+          // 是否使用高精度定位，默认：true
+          enableHighAccuracy: true,
+          // 设置定位超时时间，默认：无穷大
+          timeout: 10000,
+        });
+
+        geolocation.getCurrentPosition();
+        AMap.event.addListener(geolocation, "complete", onComplete);
+        AMap.event.addListener(geolocation, "error", onError);
+
+        // 成功获得定位
+        function onComplete(data) {
+          // data是具体的定位信息 精准定位
+          // console.log(data);
+
+          //使用vuex中的actions
+          self.$store.dispatch("setPosition", data);
+          self.$store.dispatch("setAddress", data.formattedAddress);
+        }
+
+        // 失败
+        function onError(data) {
+          // 定位出错
+          // console.log(data);
+          // 处理定位出错
+          self.handleErrorPosition();
+        }
+      });
+    },
+    handleErrorPosition() {
+      let self = this;
+      AMap.plugin("AMap.CitySearch", function () {
+        var citySearch = new AMap.CitySearch();
+        citySearch.getLocalCity(function (status, result) {
+          if (status === "complete" && result.info === "OK") {
+            // 查询成功，result即为当前所在城市信息
+            console.log(result); //返回的是经纬度
+
+            // 逆向地理坐标编码，将经纬度解析成地址
+            AMap.plugin("AMap.Geocoder", function () {
+              var geocoder = new AMap.Geocoder({
+                // city 指定进行编码查询的城市，支持传入城市名、adcode 和 citycode
+                city: result.adcode,
+              });
+
+              var lnglat = result.rectangle.split(";")[0].split(";");
+              geocoder.getAddress(lnglat, function (status, data) {
+                if (status === "complete" && data.info === "OK") {
+                  // data为对应的地理位置详细信息
+                  // console.log(data);
+                  //使用vuex中的actions
+                  self.$store.dispatch("setPosition", {
+                    addressComponent: {
+                      city: result.city,
+                      province: result.province,
+                    },
+                    formattedAddress: data.regeocode.formattedAddress,
+                  });
+                  self.$store.dispatch(
+                    "setAddress",
+                    data.regeocode.formattedAddress
+                  );
+                }
+              });
+            });
+          }
+        });
+      });
+    },
+  },
+
+  data() {
+    return {
+      tabBarList: [
+        {
+          tabBarItemText: "首页",
+          tabBarImg: "home",
+          path: "/home",
+        },
+        {
+          tabBarItemText: "订单",
+          tabBarImg: "file-text-o",
+          path: "/order",
+        },
+        {
+          tabBarItemText: "我的",
+          tabBarImg: "user",
+          path: "/profile",
+        },
+      ],
+    };
+  },
+  created() {
+    this.getGaoDePosition();
+  },
+};
+</script>
+
 <style>
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+  width: 100%;
+  height: 100%;
+  font-size: 14px;
+  background: #f1f1f1;
 }
-
-#nav {
-  padding: 30px;
-}
-
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
+.tab-bar {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #fff;
+  height: 49px;
 }
 </style>

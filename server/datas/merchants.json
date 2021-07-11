@@ -1,0 +1,28 @@
+{
+  "brand_intros": [
+      {
+          "brief": "深圳幸福西饼食品有限公司创建于2008年10月，是一家高速发展、专业从事烘焙食品，集研发、生产为一体的O2O烘焙品牌公司。自建专业冷链配送团队，提出幸福承诺，迟到半小时免费赠送，在线售卖超过100万个蛋糕，经过多年发展，逐步成为国内具有规模和影响力的烘焙企业之一。",
+          "image_hash": "dc05ff906492983a31dd958cb8104fd5jpeg",
+          "name": null
+      },
+      {
+          "brief": "榴莲香雪、芒果茫茫、单恋黑森林、提拉米苏，甜美、甘醇、深邃、稀少，从未有过的四味组合~尽在幸福西饼",
+          "image_hash": "4e635e02ac63be4e22e552648e533159jpeg",
+          "name": null
+      },
+      {
+          "brief": "全城轿车冷链配送到家，给您优质的贴心服务",
+          "image_hash": "158556dfbb7cbc25b68198dd96f0b850jpeg",
+          "name": null
+      }
+  ],
+  "cooker_intros": null,
+  "header_image": "8535ad502efecd372a3bfe226e1e4c06png",
+  "restaurant_image_hash": null,
+  "restaurant_name": null,
+  "signature_foods": null,
+  "target_url": "eleme://web?url=https%3A%2F%2Fh5.ele.me%2Fbrandstory%2F%3Frestaurant_id%3DE8745087328326594324",
+  "title": "幸福就在家门口",
+  "video": null,
+  "winning_intros": null
+}
