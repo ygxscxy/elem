@@ -1,60 +1,367 @@
 <template>
-  <div>
-    <div class="aaa"></div>
-    <div class="shop">
-      <mt-loadmore
-        :top-method="loadTop"
-        :bottom-method="loadBottom"
-        :bottom-all-loaded="allLoaded"
-        :auto-fill="false"
-        ref="loadmore"
-      >
-        <ul ref="ul1">
+  <!-- <div class="flex">
+    <Scroll class="left">
+      <ul>
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>
+      </ul>
+    </Scroll>
+    <Scroll class="right">
+      <ul>
+        <li>2</li>
+        <li>2</li>
+        <li>2</li>
+        <li>2</li>
+        <li>2</li>
+        <li>2</li>
+        <li>2</li>
+        <li>2</li>
+        <li>2</li>
+        <li>2</li>
+        <li>2</li>
+        <li>2</li>
+        <li>2</li>
+        <li>2</li>
+        <li>2</li>
+        <li>2</li>
+        <li>2</li>
+        <li>2</li>
+        <li>2</li>
+        <li>2</li>
+        <li>2</li>
+        <li>2</li>
+        <li>2</li>
+        <li>2</li>
+        <li>2</li>
+        <li>2</li>
+        <li>2</li>
+        <li>2</li>
+        <li>2</li>
+        <li>2</li>
+        <li>2</li>
+        <li>2</li>
+        <li>2</li>
+        <li>2</li>
+        <li>2</li>
+        <li>2</li>
+        <li>2</li>
+        <li>2</li>
+        <li>2</li>
+        <li>2</li>
+        <li>2</li>
+        <li>2</li>
+        <li>2</li>
+        <li>2</li>
+        <li>2</li>
+        <li>2</li>
+        <li>2</li>
+        <li>2</li>
+        <li>2</li>
+        <li>2</li>
+        <li>2</li>
+        <li>2</li>
+        <li>2</li>
+        <li>2</li>
+        <li>2</li>
+        <li>2</li>
+        <li>2</li>
+        <li>2</li>
+        <li>2</li>
+        <li>2</li>
+        <li>2</li>
+        <li>2</li>
+        <li>2</li>
+        <li>2</li>
+        <li>2</li>
+        <li>2</li>
+        <li>2</li>
+        <li>2</li>
+        <li>2</li>
+        <li>2</li>
+        <li>2</li>
+        <li>2</li>
+        <li>2</li>
+        <li>2</li>
+        <li>2</li>
+        <li>2</li>
+        <li>2</li>
+        <li>2</li>
+        <li>2</li>
+        <li>2</li>
+        <li>2</li>
+        <li>2</li>
+        <li>2</li>
+        <li>2</li>
+        <li>2</li>
+        <li>2</li>
+        <li>2</li>
+        <li>2</li>
+        <li>2</li>
+        <li>2</li>
+        <li>2</li>
+        <li>2</li>
+        <li>2</li>
+        <li>2</li>
+        <li>2</li>
+        <li>2</li>
+        <li>2</li>
+        <li>2</li>
+        <li>2</li>
+        <li>2</li>
+      </ul>
+    </Scroll>
+  </div> -->
+
+  <div class="classify-main flex">
+    <scroll class="classify-name-scroll">
+      <!-- 左侧 -->
+      <div class="classify-name flex flex-column a-c j-c-s-b">
+        <ul>
           <li>1</li>
-          <li>2</li>
-          <li>3</li>
-          <li>4</li>
-          <li>5</li>
-          <li>6</li>
-          <li>7</li>
-          <li>8</li>
-          <li>9</li>
-          <li>10</li>
+          <li>1</li>
+          <li>1</li>
+          <li>1</li>
+          <li>1</li>
+          <li>1</li>
+          <li>1</li>
+          <li>1</li>
+          <li>1</li>
+          <li>1</li>
+          <li>1</li>
+          <li>1</li>
+          <li>1</li>
+          <li>1</li>
+          <li>1</li>
+          <li>1</li>
+          <li>1</li>
+          <li>1</li>
+          <li>1</li>
+          <li>1</li>
+          <li>1</li>
+          <li>1</li>
+          <li>1</li>
+          <li>1</li>
+          <li>1</li>
+          <li>1</li>
+          <li>1</li>
+          <li>1</li>
+          <li>1</li>
+          <li>1</li>
+          <li>1</li>
+          <li>1</li>
+          <li>1</li>
+          <li>1</li>
+          <li>1</li>
+          <li>1</li>
+          <li>1</li>
+          <li>1</li>
+          <li>1</li>
+          <li>1</li>
+          <li>1</li>
+          <li>1</li>
+          <li>1</li>
+          <li>1</li>
+          <li>1</li>
+          <li>1</li>
+          <li>1</li>
+          <li>1</li>
+          <li>1</li>
+          <li>1</li>
         </ul>
-      </mt-loadmore>
-    </div>
+      </div>
+    </scroll>
+    <scroll class="classify-goods-list-scroll">
+      <!-- 右侧 -->
+      <ul class="classify-goods-list">
+        <li>2</li>
+        <li>2</li>
+        <li>2</li>
+        <li>2</li>
+        <li>2</li>
+        <li>2</li>
+        <li>2</li>
+        <li>2</li>
+        <li>2</li>
+        <li>2</li>
+        <li>2</li>
+        <li>2</li>
+        <li>2</li>
+        <li>2</li>
+        <li>2</li>
+        <li>2</li>
+        <li>2</li>
+        <li>2</li>
+        <li>2</li>
+        <li>2</li>
+        <li>2</li>
+        <li>2</li>
+        <li>2</li>
+        <li>2</li>
+        <li>2</li>
+        <li>2</li>
+        <li>2</li>
+        <li>2</li>
+        <li>2</li>
+        <li>2</li>
+        <li>2</li>
+        <li>2</li>
+        <li>2</li>
+        <li>2</li>
+        <li>2</li>
+        <li>2</li>
+        <li>2</li>
+        <li>2</li>
+        <li>2</li>
+        <li>2</li>
+        <li>2</li>
+        <li>2</li>
+        <li>2</li>
+        <li>2</li>
+        <li>2</li>
+        <li>2</li>
+        <li>2</li>
+        <li>2</li>
+        <li>2</li>
+        <li>2</li>
+        <li>2</li>
+        <li>2</li>
+        <li>2</li>
+        <li>2</li>
+        <li>2</li>
+        <li>2</li>
+        <li>2</li>
+        <li>2</li>
+        <li>2</li>
+        <li>2</li>
+        <li>2</li>
+        <li>2</li>
+        <li>2</li>
+        <li>2</li>
+        <li>2</li>
+        <li>2</li>
+        <li>2</li>
+        <li>2</li>
+        <li>2</li>
+        <li>2</li>
+        <li>2</li>
+        <li>2</li>
+        <li>2</li>
+        <li>2</li>
+        <li>2</li>
+        <li>2</li>
+        <li>2</li>
+        <li>2</li>
+        <li>2</li>
+        <li>2</li>
+        <li>2</li>
+        <li>2</li>
+        <li>2</li>
+        <li>2</li>
+        <li>2</li>
+        <li>2</li>
+        <li>2</li>
+        <li>2</li>
+        <li>2</li>
+        <li>2</li>
+        <li>2</li>
+        <li>2</li>
+        <li>2</li>
+        <li>2</li>
+        <li>2</li>
+        <li>2</li>
+        <li>2</li>
+        <li>2</li>
+        <li>2</li>
+        <li>2</li>
+      </ul>
+    </scroll>
   </div>
 </template>
 
 <script>
-export default {
-  data() {
-    return {
-      allLoaded: false,
-    };
-  },
-  methods: {
-    loadTop() {
-      this.$refs.loadmore.onTopLoaded();
-    },
+import Scroll from "components/common/scroll/Scroll.vue";
 
-    loadBottom() {
-      for (let i = 0; i < 10; i++) {
-        let li = document.createElement("li");
-        li.innerText = "aaaa";
-        this.$refs.ul1.append(li);
-      }
-      // this.allLoaded = true; // 若数据已全部获取完毕
-      this.$refs.loadmore.onBottomLoaded();
-    },
+export default {
+  components: {
+    Scroll,
   },
 };
 </script>
 
 <style>
-.aaa {
+.classify-name {
+  width: 100px;
+  background-color: rgb(247, 247, 247);
+}
+.classify-goods-list {
+  width: calc(100vw-100px);
+}
+.classify-name-scroll {
+  position: absolute;
+  top: 44px;
+  bottom: 49px;
+  left: 0;
+  right: calc(100vw-100px);
   background-color: red;
-  height: 95px;
-  width: 100%;
+}
+.classify-goods-list-scroll {
+  position: absolute;
+  top: 44px;
+  bottom: 49px;
+  left: 110px;
+  right: 0;
+  background-color: pink;
+}
+.classify-name ul li {
+  margin-bottom: 20px;
+  padding: 5px;
 }
 </style>

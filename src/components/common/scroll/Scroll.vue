@@ -1,6 +1,6 @@
 <template>
   <!-- wrapper必须要有高度 -->
-  <div class="wrapper">
+  <div ref="wrapper">
     <!-- 当 content 的高度不超过父容器的高度，是不能滚动的 -->
     <div class="content">
       <!-- 滚动内容 -->
@@ -30,7 +30,7 @@ export default {
     },
   },
   mounted() {
-    this.scroll = new BetterScroll(".wrapper", {
+    this.scroll = new BetterScroll(this.$refs.wrapper, {
       movable: true,
       zoom: true,
       // 有些情况下某些配置是不需要的，所以不能写死，让使用者传递
@@ -63,7 +63,7 @@ export default {
     }
 
     if (this.probeType == 2 || this.probeType == 3) {
-      // 监听滚动到的位置
+      // 监听滚动到的位置 this.scroll.on添加事件
       this.scroll.on("scroll", (position) => {
         // 向父组件传递position，那个组件只要绑定上getScrollPosition自定事件，这个position就会自动的携带过去
         this.$emit("getScrollPosition", position);

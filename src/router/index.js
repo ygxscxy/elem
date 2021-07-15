@@ -11,6 +11,11 @@ const Order = () => import('views/order/Order.vue')
 const Address = () => import("views/address/Address.vue")
 const CityList = () => import("views/cityList/CityList.vue")
 const Search = () => import("views/search/Search.vue")
+const StoreDetail = () => import("views/storeDetail/StoreDetail.vue")
+const ChoiseFood = () => import("views/storeDetail/storeChildComp/ChoiseFood.vue")
+const Comment = () => import("views/storeDetail/storeChildComp/Comment.vue")
+const StoreInfo = () => import("views/storeDetail/storeChildComp/StoreInfo.vue")
+
 const routes = [
   { path: "/home", name: "home", component: Home },
   { path: "/login", name: "login", component: Login },
@@ -19,6 +24,17 @@ const routes = [
   { path: "/address", name: "address", component: Address },
   { path: "/citylist", name: "cityList", component: CityList },
   { path: "/search", name: "search", component: Search },
+  {
+    path: "/storedetail", name: "storedetail", component: StoreDetail,
+    redirect: "/storedetail/choisefood",
+    children: [
+      { path: "choisefood", name: "ChoiseFood", component: ChoiseFood },
+      { path: "comment", name: "comment", component: Comment },
+      { path: "storeinfo", name: "storeinfo", component: StoreInfo },
+
+
+    ]
+  },
   { path: "/", redirect: "/home" },
 
 ]

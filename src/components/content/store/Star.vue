@@ -29,14 +29,14 @@ export default {
         // 向下取整
         let len = Math.floor(this.rating);
         //  全星
-        for (let i = 0; i < this.rating; i++) {
+        for (let i = 0; i < LEN; i++) {
           res.push(ALL_STAR);
         }
         res.push(HALF_STAR);
       } else {
         // 没有半星
         //  全星
-        for (let i = 0; i < this.rating; i++) {
+        for (let i = 0; i < LEN; i++) {
           res.push(ALL_STAR);
         }
       }

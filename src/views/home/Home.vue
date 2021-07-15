@@ -209,9 +209,7 @@ export default {
     isTopShowIpt(isShowMask) {
       this.isShowMask = isShowMask;
     },
-    orderBy(order_by) {
-      console.log(order_by);
-    },
+    orderBy(order_by) {},
 
     // 加载数据
     getMoreData() {

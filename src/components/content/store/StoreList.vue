@@ -6,6 +6,7 @@
       v-for="(StoreList, index) in homeStoreList"
     >
       <StoreItem
+        @click.native="$router.push('/storedetail')"
         v-for="(storeItem, i) in StoreList"
         :storeItem="storeItem.restaurant"
         :key="storeItem.restaurant.id"
@@ -25,6 +26,9 @@ export default {
   },
   components: {
     StoreItem,
+  },
+  mounted() {
+    console.log(this.homeStoreList);
   },
 };
 </script>

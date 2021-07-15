@@ -112,10 +112,6 @@ export default {
 
 <style>
 #app {
-  width: 100%;
-  height: 100%;
-  font-size: 14px;
-  background: #f1f1f1;
 }
 .tab-bar {
   position: fixed;

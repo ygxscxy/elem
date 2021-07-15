@@ -3,7 +3,7 @@
     <ul class="search-store" v-if="searchData.restaurant">
       <li
         v-for="item in searchData.restaurant"
-        @click="$emit('storeItemClick')"
+        @click="$router.push('/storedetail')"
       >
         <img
           :src="$formatImgSrc(item.image_path)"
@@ -17,7 +17,11 @@
       </li>
     </ul>
     <ul v-if="searchData.words" class="search-store">
-      <li v-for="(item, index) in searchData.words" :key="index">
+      <li
+        @click="$emit('storeItemClick')"
+        v-for="(item, index) in searchData.words"
+        :key="index"
+      >
         <i class="fa fa-search"></i>
         <span class="title">{{ item }}</span>
       </li>
