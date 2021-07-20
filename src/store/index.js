@@ -11,7 +11,11 @@ Vue.use(Vuex)
 
 const state = {
   position: {},
-  address: ""
+  address: "",
+  // 保存订单信息
+  order_info: null,
+  currentGetAddress: null,
+  customRemarks: null
 }
 
 export default new Vuex.Store({

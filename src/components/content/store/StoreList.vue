@@ -28,7 +28,7 @@ export default {
     StoreItem,
   },
   mounted() {
-    console.log(this.homeStoreList);
+    // console.log(this.homeStoreList);
   },
 };
 </script>

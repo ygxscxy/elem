@@ -109,7 +109,8 @@ export default {
   },
   computed: {
     getAddress() {
-      return this.$store.getters.getAddress;
+      if (this.$store.getters.getAddress) return this.$store.getters.getAddress;
+      else return null;
     },
     currentCity() {
       // 当前城市的定位
@@ -183,6 +184,7 @@ export default {
         // this.homeStoreList = res.data.data;
         // console.log(this.homeStoreList);
         // this.temp = res.data.data;
+        // console.log(this.homeStoreList);
       });
     },
 

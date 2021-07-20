@@ -155,7 +155,9 @@ textarea {
   border: none;
   background: none;
 }
-
+*{
+  box-sizing: border-box;
+}
 /* flex布局 */
 /* @import "./normalize.css";在css中导入css */ 
 

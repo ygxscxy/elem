@@ -1,9 +1,13 @@
 <template>
   <div class="header">
     <!-- 左侧:用于返回 -->
-    <div class="header-left-box is-left" v-show="isLeft">
+    <div
+      class="header-left-box is-left"
+      @click="$router.go(-1)"
+      v-show="isLeft"
+    >
       <i class="fa fa-chevron-left"></i>
-      <button @click="$router.go(-1)">返回</button>
+      <button v-if="isShowBackTxt">返回</button>
     </div>
     <!-- 中间:用于编写标题 -->
     <h1 class="header-title">{{ title }}</h1>
@@ -28,6 +32,10 @@ export default {
     isRight: {
       type: Boolean,
       default: false,
+    },
+    isShowBackTxt: {
+      type: Boolean,
+      default: true,
     },
   },
 };
@@ -66,6 +74,8 @@ export default {
 }
 .header-title {
   flex: 1;
+  font-size: 18px;
+  font-weight: 700;
 }
 .is-left {
   text-align: left;

@@ -28,7 +28,7 @@ export default {
       getHomeData({
         url: "/api/merchants",
       }).then((res) => {
-        console.log(res.data);
+        // console.log(res.data);
         this.storeInfo = res.data;
       });
     },

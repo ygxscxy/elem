@@ -57,7 +57,7 @@
         </p>
       </div>
       <div class="go-pay" :class="{ 'active-go-pay': isSelectFood }">
-        <span v-if="isSelectFood">去结算</span>
+        <span v-if="isSelectFood" @click="goSettlement">去结算</span>
         <span v-else
           >￥{{ storeIndexData.rst.float_minimum_order_amount }}起送</span
         >
@@ -137,15 +137,30 @@ export default {
           }
         });
       });
-      console.log(this.selectFoods);
+      // console.log(this.selectFoods);
       if (tag) return true;
       else return false;
     },
   },
   mounted() {
-    console.log(this.storeIndexData);
+    // console.log(this.storeIndexData);
   },
   methods: {
+    // 去结算
+    goSettlement() {
+      // 将选中的商品存放到vuex中
+      this.$store.dispatch("setOrderInfo", {
+        totalPrice: this.totalPrice,
+        selectFoods: this.selectFoods,
+        storeIndexData: this.storeIndexData.rst,
+      });
+      this.$router.push({
+        name: "settlement",
+        // params: {
+        //   selectFoods: this.selectFoods,
+        // },
+      });
+    },
     showPopupClick() {
       this.isMask = !this.isMask;
     },

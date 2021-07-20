@@ -41,6 +41,6 @@ export default {
   line-height: 1;
 }
 .router-link-exact-active {
-  color: #009eef;
+  color: #009eef !important;
 }
 </style>

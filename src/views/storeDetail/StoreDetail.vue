@@ -87,7 +87,10 @@
     <div class="store-index-content">
       <TabControl :titles="titles"></TabControl>
     </div>
-    <router-view :storeIndexData="storeIndexData"></router-view>
+    <!-- 缓存组件 -->
+    <keep-alive>
+      <router-view :storeIndexData="storeIndexData"></router-view>
+    </keep-alive>
   </div>
 </template>
 
@@ -136,6 +139,7 @@ export default {
             });
           });
           this.storeIndexData = new FormatDetailData(val.data);
+          console.log(this.storeIndexData);
         })
         .catch((err) => {
           console.log(err);
@@ -146,6 +150,7 @@ export default {
       this.pv = !this.pv;
     },
   },
+  mounted() {},
 };
 </script>
 

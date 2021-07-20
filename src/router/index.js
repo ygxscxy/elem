@@ -15,11 +15,17 @@ const StoreDetail = () => import("views/storeDetail/StoreDetail.vue")
 const ChoiseFood = () => import("views/storeDetail/storeChildComp/ChoiseFood.vue")
 const Comment = () => import("views/storeDetail/storeChildComp/Comment.vue")
 const StoreInfo = () => import("views/storeDetail/storeChildComp/StoreInfo.vue")
+const AddAddress = () => import("../views/profile/myAddress/AddAddress.vue")
+const MyAddress = () => import("../views/profile/myAddress/MyAddress.vue")
 
 const routes = [
   { path: "/home", name: "home", component: Home },
   { path: "/login", name: "login", component: Login },
-  { path: "/profile", name: "profile", component: Profile },
+  {
+    path: "/profile", name: "profile", component: Profile,
+  },
+  { path: "/myaddress", name: "myaddress", component: MyAddress },
+  { path: "/addaddress", name: "addaddress", component: AddAddress },
   { path: "/order", name: "order", component: Order },
   { path: "/address", name: "address", component: Address },
   { path: "/citylist", name: "cityList", component: CityList },
@@ -31,9 +37,16 @@ const routes = [
       { path: "choisefood", name: "ChoiseFood", component: ChoiseFood },
       { path: "comment", name: "comment", component: Comment },
       { path: "storeinfo", name: "storeinfo", component: StoreInfo },
-
-
     ]
+  },
+  {
+    path: "/gosettlement", name: "settlement", component: () => import("../views/settlement/Settlement.vue")
+  },
+  {
+    path: "/remarksinfo", name: "remarksinfo", component: () => import("../views/remarksInfo/RemarksInfo.vue")
+  },
+  {
+    path: "/pay", name: "pay", component: () => import("../views/pay/Pay.vue")
   },
   { path: "/", redirect: "/home" },
 

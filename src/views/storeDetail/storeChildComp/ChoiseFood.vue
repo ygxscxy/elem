@@ -186,7 +186,7 @@ export default {
     foodIttemClick(foodItem) {
       this.selectFoodItem = foodItem;
       this.isShowFoodDetail = true;
-      console.log(foodItem);
+      // console.log(foodItem);
     },
     clickMenu(index) {
       let foodItem =

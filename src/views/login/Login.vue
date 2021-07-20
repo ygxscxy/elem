@@ -49,7 +49,7 @@
 
 <script>
 import InputComp from "components/common/inputComp/InputComp.vue";
-
+import { getHomeData } from "network/home/getHomeData.js";
 import getCode from "network/phoneMessage/getMessage.js";
 
 export default {
@@ -85,10 +85,20 @@ export default {
       if (this.userInputCode !== this.phoneMessage) {
         this.error.code = "验证码错误";
       } else {
-        // localStorage.setItem("isLogin", true);
-        console.log("aaa");
-        localStorage.setItem("isLogin", true);
-        this.$router.push("/");
+        getHomeData({
+          url: "/api/login",
+          params: {
+            phone: this.phone,
+          },
+        }).then((res) => {
+          console.log(res.data);
+          if (res.data) {
+            localStorage.setItem("isLogin", res.data.id);
+            this.$router.push("/");
+          } else {
+            alert("服务器繁忙请重试~");
+          }
+        });
       }
     },
     // 倒计时
@@ -179,8 +189,8 @@ export default {
 .login-btn {
   margin-top: 20px;
   width: 100%;
-  height: 30px;
-  line-height: 30px;
+  height: 40px;
+  line-height: 40px;
   background-color: #48ca38;
   border-radius: 4px;
   color: white;

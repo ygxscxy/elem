@@ -94,7 +94,7 @@ export default {
         url: "/api/comments",
       }).then((res) => {
         let { comments, rating, tags } = new formatCommentData(res.data);
-        console.log(comments, rating, tags);
+        // console.log(comments, rating, tags);
         this.comments = comments;
         this.rating = rating;
         this.tags = tags;

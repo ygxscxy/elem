@@ -9,7 +9,11 @@
   "dependencies": {
     "axios": "^0.21.1",
     "better-scroll": "2.3.1",
+    "body-parser": "^1.19.0",
+    "connect-multiparty": "^2.2.0",
     "core-js": "^3.6.5",
+    "cors": "^2.8.5",
+    "fs": "0.0.1-security",
     "mint-ui": "^2.2.13",
     "vue": "^2.6.11",
     "vue-router": "3.2.0",

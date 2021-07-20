@@ -151,7 +151,7 @@ export default {
       }
     },
     storeItemClick() {
-      console.log("aa");
+      // console.log("aa");
       this.isShowDetailStoreItem = true;
     },
     loadMore() {

@@ -13,7 +13,7 @@ module.exports = {
       }
     }
   },
-  // publicPath: '/wxzf/dist/', // 打包文件相对路径
+  // publicPath: '/dist/', // 打包文件相对路径
   devServer: {
     open: true,
     host: 'localhost',
