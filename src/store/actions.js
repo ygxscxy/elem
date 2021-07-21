@@ -16,6 +16,9 @@ export default {
   },
   setCustomRemarks(context, customRemarks) {
     context.commit("setCustomRemarks", customRemarks)
+  },
+  setUserInfo(context, userInfo) {
+    context.commit("setUserInfo", userInfo)
   }
 }
 

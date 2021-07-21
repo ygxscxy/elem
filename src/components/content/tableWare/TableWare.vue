@@ -7,9 +7,7 @@
           <div class="tabeleware-header">
             <span class="close" @click="$emit('close')">取消</span>
             <span class="title">选择本单餐具</span>
-            <span class="comfirm" @click="$emit('comfirm', selectCountItem)"
-              >确定</span
-            >
+            <span class="comfirm" @click="comfirmClick">确定</span>
           </div>
 
           <ul class="item-box">
@@ -48,6 +46,9 @@ export default {
     selectCount(index, item) {
       this.activeIndex = index;
       this.selectCountItem = item;
+    },
+    comfirmClick() {
+      this.$emit("comfirm", this.selectCountItem);
     },
   },
 };

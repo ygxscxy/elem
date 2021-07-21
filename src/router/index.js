@@ -48,6 +48,9 @@ const routes = [
   {
     path: "/pay", name: "pay", component: () => import("../views/pay/Pay.vue")
   },
+  {
+    path: "/orderdetail", name: "orderdetail", component: () => import("../views/order/OrderDetail.vue")
+  },
   { path: "/", redirect: "/home" },
 
 ]

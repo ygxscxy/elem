@@ -80,7 +80,7 @@
 <script>
 import HeaderNav from "components/common/header/HeaderNav.vue";
 import { getHomeData } from "network/home/getHomeData.js";
-
+import { MessageBox } from "mint-ui";
 export default {
   components: {
     HeaderNav,
@@ -118,8 +118,14 @@ export default {
       return phone.replace(/(\d{3})\d{4}(\d{4})/, "$1****$2");
     },
     handleLoginOut() {
-      localStorage.removeItem("isLogin");
-      this.$router.push("/login");
+      MessageBox.confirm("确定退出吗?", "提示")
+        .then((action) => {
+          localStorage.removeItem("isLogin");
+          this.$router.push("/login");
+        })
+        .catch((err) => {
+          // console.log(err);
+        });
     },
     handleMyAddress() {
       if (this.userInfo) {

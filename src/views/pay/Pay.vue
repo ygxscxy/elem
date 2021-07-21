@@ -24,13 +24,16 @@
           </li>
         </ul>
       </div>
-      <button class="btn-submit" :disabled="isTimeOut">确认支付</button>
+      <button class="btn-submit" @click="payClick" :disabled="isTimeOut">
+        确认支付
+      </button>
     </div>
   </div>
 </template>
 
 <script>
 import HeaderNav from "components/common/header/HeaderNav.vue";
+import { Toast } from "mint-ui";
 
 export default {
   components: {
@@ -58,9 +61,10 @@ export default {
     },
   },
   mounted() {
-    console.log(this.orderInfo);
+    // console.log(this.orderInfo);
   },
   methods: {
+    // 倒计时函数
     countTimeDown() {
       let minute = 14;
       let second = 59;
@@ -87,6 +91,19 @@ export default {
 
         this.countDown = "00:" + minute + ":" + second;
       }, 1000);
+    },
+    payClick() {
+      // orderInfo
+      Toast({
+        message: "支付成功",
+        position: "center",
+        duration: 2000,
+      });
+      setTimeout(() => {
+        this.$router.push({
+          name: "order",
+        });
+      }, 2000);
     },
   },
 

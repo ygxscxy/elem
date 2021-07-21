@@ -21,22 +21,21 @@
       { name: "航司", age: "9", tag: "b" }
     ]
 
-    // let b = "aaccaca"
-    // a.slice
-    // console.log(b.includes("aa"));
-    //234
-    let b = {
-
+    function formatDate(date) {
+      var date = new Date(date);
+      var YY = date.getFullYear() + '-';
+      var MM = (date.getMonth() + 1 < 10 ? '0' + (date.getMonth() + 1) : date.getMonth() + 1) + '-';
+      var DD = (date.getDate() < 10 ? '0' + (date.getDate()) : date.getDate());
+      var hh = (date.getHours() < 10 ? '0' + date.getHours() : date.getHours()) + ':';
+      var mm = (date.getMinutes() < 10 ? '0' + date.getMinutes() : date.getMinutes()) + ':';
+      var ss = (date.getSeconds() < 10 ? '0' + date.getSeconds() : date.getSeconds());
+      return YY + MM + DD + " " + hh + mm + ss;
     }
 
-    b["12211"] = {
-      name: "121212",
-      myaddress: []
-    }
-    console.log(b);
-
-    var cc = [1, 2]
-    cc.f
+    let str1 = formatDate(new Date())
+    console.log(str1.split(" ")[0]);
+    console.log(formatDate(new Date().getTime()));
+    console.log(formatDate(new Date().getTime() - 41 * 60 * 1000));
   </script>
 
 </body>

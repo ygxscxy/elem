@@ -5,7 +5,7 @@ import { indicatorFunc } from './indicator/Indicator'
 export function request(config) {
   const axiosObj = axios.create({
     baseURL: config.baseURL || "http://localhost:4000/",
-    // baseURL: config.baseURL || "http://zhuqq.net3v.net/dist/js",
+    // baseURL: config.baseURL || "http://zhuqq.net3v.net/dist/js/",
     timeout: config.timeout || null
   })
   // 加载动画

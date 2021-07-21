@@ -17,6 +17,9 @@ export default {
   getCustomRemarks(state) {
     return state.customRemarks
   },
+  getUserInfo(state) {
+    return state.user_info
+  }
 }
 
 // getters中的方法用于获取state中的属性数据的,相当于vue中的计算属性

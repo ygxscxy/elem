@@ -18,6 +18,11 @@ export default {
   setCustomRemarks(state, customRemarks) {
     state.customRemarks = customRemarks
   },
+  setUserInfo(state, payload) {
+    // console.log(payload);
+    state.user_info["currentAddress"] = payload.currentAddress
+    state.user_info["selectTableWareCount"] = payload.selectTableWareCount
+  }
 }
 // 更改state中的内容必须要经过mutation mutation中的异步操作必须要经过action
 // 调用mutation中的方法使用:$store.commit("方法名",参数)

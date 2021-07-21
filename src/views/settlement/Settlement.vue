@@ -1,4 +1,5 @@
 <template>
+<!-- 结算页面 -->
   <div class="settlement" v-if="orderInfo">
     <HeaderNav title="确认订单" :isLeft="true"></HeaderNav>
     <div class="settlement-box" :class="{'have-food':orderInfo==undefined}">
@@ -92,18 +93,23 @@ export default {
       isHaveAddress: false,
       // address: null,
       isShowTableWare: false,
+      // 餐具信息
       selectTableWareCount: "未选择",
+      // orderDetail: {},
     };
   },
   computed: {
+    // 设置的当前收货地址
     currentAddress() {
       return this.$store.getters.getCurrentAddress;
     },
+    // 订单信息
     orderInfo() {
       if (this.$store.getters.getOrderInfo)
         return this.$store.getters.getOrderInfo;
       else null;
     },
+    // 自定义备注信息
     customremarks() {
       if (this.$store.getters.getCustomRemarks)
         return this.$store.getters.getCustomRemarks;
@@ -136,6 +142,10 @@ export default {
         });
         return;
       }
+      this.$store.dispatch("setUserInfo", {
+        currentAddress: this.currentAddress,
+        selectTableWareCount: this.selectTableWareCount,
+      });
       this.$router.push("/pay");
     },
     comfirm(item) {
@@ -193,6 +203,12 @@ export default {
       }
     });
   },
+  // beforeRouteLeave (to, from, next) {
+  //   next(vm=>{
+  //     vm.orderDetail["selectTableWareCount"]=vm.selectTableWareCount
+  //     vm.orderDetail
+  //   })
+  // }
 };
 </script>
 

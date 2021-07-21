@@ -15,7 +15,8 @@ const state = {
   // 保存订单信息
   order_info: null,
   currentGetAddress: null,
-  customRemarks: null
+  customRemarks: null,
+  user_info: {}
 }
 
 export default new Vuex.Store({
